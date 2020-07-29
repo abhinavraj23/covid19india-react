@@ -1,3 +1,5 @@
+import '../styles/mapSwitcher.scss';
+
 import {PRIMARY_STATISTICS, COLORS} from '../constants';
 
 import classnames from 'classnames';
@@ -45,7 +47,7 @@ const MapSwitcher = ({mapStatistic, setMapStatistic}) => {
   );
 
   return (
-    <div className="MapSwitcher" ref={mapSwitcher}>
+    <div className="map-switcher" ref={mapSwitcher}>
       <animated.div className="highlight" style={spring}></animated.div>
 
       {PRIMARY_STATISTICS.map((statistic, index) => (
