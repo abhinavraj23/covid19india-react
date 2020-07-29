@@ -21,7 +21,7 @@ function PureLevelItem({statistic, total, delta}) {
   return (
     <React.Fragment>
       <h6 className="title">{t(capitalize(statistic))}</h6>
-      <animated.h5 className="delta">
+      <animated.h6 className="delta">
         {statistic !== 'active' ? (
           delta > 0 ? (
             spring.delta.interpolate(
@@ -33,10 +33,10 @@ function PureLevelItem({statistic, total, delta}) {
         ) : (
           '\u00A0'
         )}
-      </animated.h5>
-      <animated.h3 className="total">
+      </animated.h6>
+      <animated.h4 className="total">
         {spring.total.interpolate((total) => formatNumber(Math.floor(total)))}
-      </animated.h3>
+      </animated.h4>
     </React.Fragment>
   );
 }
